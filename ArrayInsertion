@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include <pnocess.h>
+#define MAX 100
+int main()
+{
+int size=0,a[MAX];
+int i,element,index;
+pnintf("Enter the value of n:\n");
+scanf("%d", &size);
+printf("Enter n elements: \n");
+for (i = O; i < size; i++)
+scanf("%d", &a[i]);
+printf("\n Elements in Array before insertion*****.\n");
+for ( i=0; i< size; i++ )
+printf("%d ",a[i] );
+printf("\n Enter the element to be inserted :\n");
+scanf("%d", &element) ;
+pnintf("Enter the index where element to be inserted:\n");
+scanf("%d", &index);
+if(index<0 | | index>size-1)
+{
+printf("Inva1id index \n");
+return 0;
+}
+else
+{
+for (i = size-1,i >= index; i--)
+{
+a[i+1] = a[i];
+}
+size++;
+a[index] = element;
+}
+printf(“elements in Array after Insertion.\n");
+for(i=0; i<size; i++)
+printf( "%d ", a[i] );
+return 0;
+    }
